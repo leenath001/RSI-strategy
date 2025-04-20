@@ -1,5 +1,5 @@
 # RSI-strategy
-Functions for employing RSI trading strategy. MUST INCLUDE INDICATORS SCRIPT TO FILE FOR TRADINGFUNC TO WORK
+Functions for employing RSI trading strategy. MUST INCLUDE INDICATORS & DATAFUNCS SCRIPT TO FILE FOR TRADINGFUNC TO WORK
 
 Goal : Strategy aims to use RSI indicator to identify levels where asset is overbought/oversold.
 *  To run tradingfuncs, create an interactive brokers account and download IB Gateway (API must be simultaneously running alongside the function inside a terminal). 
