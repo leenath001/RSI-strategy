@@ -87,7 +87,7 @@ def RSI_breakout_backtest(ticker,window,year):
 
         if P == 0 and comb.iloc[i-1,3] < 70: # buy at open
             P = 1
-            valuevec[i] = valuevec[i-1] * (1 + comb.iloc[i,2])
+            valuevec[i] = (valuevec[i-1] * (1 + comb.iloc[i,2])) + (np.random.randn() * 0.02) - .35
             actionvec[i] = 'B'
     
         elif P == 1 and comb.iloc[i-1,3] < 70: # hold
@@ -96,7 +96,7 @@ def RSI_breakout_backtest(ticker,window,year):
 
         elif P == 1 and comb.iloc[i-1,3] >= 70: # sell at open
             P = 0
-            valuevec[i] = valuevec[i-1] * (1 + ((comb.iloc[i,0]-comb.iloc[i-1,1])/comb.iloc[i-1,1]))
+            valuevec[i] = (valuevec[i-1] * (1 + ((comb.iloc[i,0]-comb.iloc[i-1,1])/comb.iloc[i-1,1]))) + (np.random.randn() * 0.02) - .35
             actionvec[i] = 'S'
     
         else:
